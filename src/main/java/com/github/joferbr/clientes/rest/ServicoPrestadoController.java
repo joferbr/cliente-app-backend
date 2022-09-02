@@ -17,8 +17,9 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/servicos-prestados")
+@RequestMapping("/servicos-prestados")
 @RequiredArgsConstructor
+//@CrossOrigin("http://localhost:4200")
 public class ServicoPrestadoController {
 
     //O ServicoPrestadoController só funciona de as instâncias abaixo estiverem funcionando
