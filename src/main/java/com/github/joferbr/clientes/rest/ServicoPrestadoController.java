@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/servicos-prestados")
+@RequestMapping("/api/servicos-prestados")
 @RequiredArgsConstructor
 //@CrossOrigin("http://localhost:4200")
 public class ServicoPrestadoController {
@@ -62,6 +62,7 @@ public class ServicoPrestadoController {
         return repository.save(servicoPrestado);
     }
 
+    @GetMapping
     public List<ServicoPrestado> pesquisar(
             @RequestParam(value = "nome", required = false, defaultValue = "") String nome,
             @RequestParam(value = "mes", required = false) Integer mes
